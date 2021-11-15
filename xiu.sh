@@ -29,9 +29,10 @@ else
         rm ./src/config.js && mv ./src/foo.js ./src/config.js && \
         ssh ff "rm -rf /home/front-project-prod/*" && \
         scp -P 60022 ./application_prod_*.zip root@120.209.135.54:/home/front-project-prod/ && \
-        ssh ff "unzip /home/front-project-prod/application*.zip -d /home/front-project-prod/" && echo "Finally! It's fucking done!"
+        ssh ff "unzip /home/front-project-prod/application*.zip -d /home/front-project-prod/" && \
+        echo "Finally, It's fucking done!"
 fi
 
 end=$(date +%s)
 take=$(( end - start ))
-echo Time taken to execute commands is ${take} seconds.
+toilet -f smblock -F metal "It tooks ${take} seconds."
