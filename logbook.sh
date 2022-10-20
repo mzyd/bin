@@ -7,6 +7,11 @@ cur_date_time="`date +%Y-%m-%d-00:00`"
 end_time="`date +%Y-%m-%d-23:59`"
 
 
+# get_git_author() {
+#     git config --global user.name > info.foo && git_author=$(cat ./info.foo) && \
+#         return git_author
+# }
+
 # Get the git author
 git config --global user.name > info.foo && git_author=$(cat ./info.foo) && \
 
